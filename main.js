@@ -1,20 +1,32 @@
 var canvas = document.getElementById('main');
-		canvasCtx = canvas.getContext('2d');
+var canvasCtx = canvas.getContext('2d');
+var start = document.getElementById('start');
 
-function fullscreen(){
-	if (canvas.webkitRequestFullScreen) {
+function resize(inner, w=null, h=null) {
+	if (inner) {
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
+	}
+	else {
+		canvas.width = w;
+		canvas.height = h;
+	}
+}
+
+function fullscreen() {
+	if (canvas.webkitRequestFullScreen) {
+		resize(true);
 		canvas.webkitRequestFullScreen();
 	}
 	else {
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		resize(true);
 		canvas.mozRequestFullScreen();
-	}            
+	}
 }
 
-canvasCtx.fillstyle = "red";
-canvasCtx.fill();
-
-canvas.addEventListener("click",fullscreen);
+start.addEventListener('click', fullscreen);
+window.addEventListener('resize', function(){
+	var w = window.innerWidth/2>600?600:window.innerWidth/2;
+	var h = window.innerWidth/3>400?400:window.innerWidth/3;
+	resize(false,w,h);
+})
