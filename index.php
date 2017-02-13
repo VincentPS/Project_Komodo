@@ -8,8 +8,7 @@
 </head>
 <body>
 	<canvas id="main"></canvas>
-
-	<footer>
+    <footer>
 		<script type="text/javascript" src="main.js"></script>
 		<!-- <script type="text/javascript" src="p5.min.js"></script> -->
 	</footer>
