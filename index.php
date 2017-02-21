@@ -10,6 +10,6 @@
 </head>
 <body>
 	<canvas id="main"></canvas>
-	<button id="start" type="button">start</button>
+	<button id="start" type="button">start</button> 
 </body>
 </html>
