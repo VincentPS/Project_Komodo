@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to check get the value of the first element in the array that has a value of 18 or more.</p>
+
+<button onclick="myFunction('leuk')">Try it</button>
+
+<p id="demo"></p>
+
+<p><strong>Note:</strong> The find() method is not supported in IE 11 (and earlier versions).</p>
+
+<script>
+var ages = ["lol","leuk","twaalf"];
+
+function myFunction(param) {
+    this.checkAdult = function(age, leuk) {
+        return age == param;
+    }
+    document.getElementById("demo").innerHTML = ages.find(checkAdult);
+}
+</script>
+
+</body>
+</html>
