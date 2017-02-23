@@ -7,6 +7,12 @@ html, body{
 	overflow: hidden;	
 }
 
+section{
+	background: #3f3f3f;
+	margin:auto;
+}
+
 #main{
-	border: 3px solid red;
+	border:3px solid black;
+	background: white;
 }
