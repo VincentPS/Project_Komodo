@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `bestiary` (
   `desc` text NOT NULL,
   `level` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `bestiary`
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `gear` (
   `desc` text NOT NULL,
   `type` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `gear`
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `recipe` text NOT NULL,
   `gold` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `items`
