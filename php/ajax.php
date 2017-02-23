@@ -8,12 +8,8 @@
         die();
     }
 
-    $table = filter_input(INPUT_POST, 'table');
-    $readQuery = $db->prepare('SELECT * FROM :table');
+    $table = $_GET['table'];
+    $readQuery = $db->prepare('SELECT * FROM ' . $table);
     $readQuery->bindParam(':table', $table);
     $readQuery->execute();
-    while ($readQuery->next()) {
-        $result[] = $readQuery->value;
-    }
-
-    echo json_encode($result);
+    echo json_encode($readQuery->fetchAll());
