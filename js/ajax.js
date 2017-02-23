@@ -1,11 +1,10 @@
+// when the window is loaded activaten the folowing
 window.onload = function() {
-    console.log('1');
+
+    // when the button is clicked get the bestiary table data
     document.getElementById('startGet').onclick = function() {
-        console.log('2');
         var getMonsters = new XMLHttpRequest();
-        console.log('3');
         getMonsters.open('GET', './php/ajax.php?table=bestiary', false);
-        console.log('4');
         getMonsters.send();
         console.log(getMonsters.responseText);
     }
