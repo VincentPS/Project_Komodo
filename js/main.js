@@ -1,16 +1,17 @@
-window.onLoad = function() {
+window.onload = function() {
 	var canvas = document.getElementById('main');
 	var canvasCtx = canvas.getContext('2d');
 	var start = document.getElementById('start');
+	resize(false);
 
-	function resize(inner, w=null, h=null) {
+	function resize(inner) {
 		if (inner) {
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
 		}
 		else {
-			canvas.width = w;
-			canvas.height =  h;
+			canvas.width = window.innerWidth/2>600?600:window.innerWidth/2;
+			canvas.height = window.innerWidth/3>400?400:window.innerWidth/3;
 		}
 	}
 
@@ -27,8 +28,9 @@ window.onLoad = function() {
 
 	start.addEventListener('click', fullscreen);
 	window.addEventListener('resize', function(){
-		var w = window.innerWidth/2>600?600:window.innerWidth/2;
-		var h = window.innerWidth/3>400?400:window.innerWidth/3;
-		resize(false,w,h);
-	});
+		var fullscreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+		if(!fullscreen) {
+			resize(false);
+		}
+	})
 }
