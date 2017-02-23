@@ -5,13 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Project Komodo</title>
 	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/ajax.js" ></script>
 </head>
 <body>
 	<canvas id="main"></canvas>
-
-	<footer>
-		<script type="text/javascript" src="main.js"></script>
-		<!-- <script type="text/javascript" src="p5.min.js"></script> -->
-	</footer>
+	<button id="start" type="button">start</button>
+	<button id="startGet" >Click to get database</button>
 </body>
 </html>
