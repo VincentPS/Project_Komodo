@@ -7,12 +7,23 @@ html, body{
 	overflow: hidden;	
 }
 
-section{
+section.canvas{
 	background: #3f3f3f;
 	margin:auto;
+	text-align:center;
+	padding: 10px;
 }
 
-#main{
+canvas#main{
 	border:3px solid black;
 	background: white;
+}
+
+section.description{
+	margin:auto;
+	width:50%;
+	background:#3f3f3f;
+	font-family:"verdana";
+	color:white;
+	padding:10px 30px 10px 30px;
 }
