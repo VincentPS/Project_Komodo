@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style/style.css">
 	<script type="text/javascript" src="js/canvas.js"></script>
 	<script type="text/javascript" src="js/ajax.js"></script>
-	<script type="text/javascript" src="js/ClassPlayer.js"></script>
+	<!-- <script type="text/javascript" src="js/ClassPlayer.js"></script> -->
 </head>
 <body>
 	<section class="canvas">
