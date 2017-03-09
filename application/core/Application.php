@@ -1,20 +1,38 @@
 <?php
 
-    /**
-    */
+    //
     class Application
     {
 
-        /**
-        */
+        //
         private $db;
         public $data = [];
 
-        /**
-        */
+        //
         public function __construct()
         {
+
+            //
+            require APP . 'view/header.php';
+            require APP . 'view/index.php';
+
+            //
             $this->connect();
+        }
+
+        //
+        private function connect()
+        {
+
+            //
+            try {
+                $this->db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
+            } catch (PDOException $e) {
+                print '<script>alert("Error! ' . $e->getMessage() . '<br/>");</script>';
+                die();
+            }
+
+            //
             $this->data = [
                 'abilities' => $this->executeQuery('SELECT * FROM abilities'),
                 'bestiary'  => $this->executeQuery('SELECT * FROM bestiary'),
@@ -22,20 +40,7 @@
             ];
         }
 
-        /**
-        */
-        private function connect()
-        {
-            try {
-                $this->db = new PDO('mysql:host=localhost;dbname=komodo', 'root', '');
-            } catch (PDOException $e) {
-                print '<script>alert("Error! ' . $e->getMessage() . '<br/>");</script>';
-                die();
-            }
-        }
-
-        /**
-        */
+        //
         private function executeQuery($query)
         {
             $query = $this->db->prepare($query);
@@ -47,5 +52,3 @@
             return $data;
         }
     }
-
-    $application = new Application();

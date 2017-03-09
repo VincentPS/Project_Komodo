@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
 	var canvas = document.getElementById('main');
 	var canvasCtx = canvas.getContext('2d');
 	var start = document.getElementById('start');
@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			canvas.height = window.innerHeight;
 		}
 		else {
-			canvas.width = window.innerWidth/2;
-			canvas.height = window.innerWidth/3;
+			canvas.width = window.innerWidth/2>600?600:window.innerWidth/2;
+			canvas.height = window.innerWidth/3>400?400:window.innerWidth/3;
 		}
 	}
 
@@ -33,4 +33,4 @@ document.addEventListener('DOMContentLoaded', function() {
 			resize(false);
 		}
 	})
-})
+}
