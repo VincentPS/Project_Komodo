@@ -4,7 +4,11 @@
 }
 
 html, body{
+<<<<<<< HEAD
 	overflow: hidden;
+=======
+	overflow: hidden;	
+>>>>>>> Alpha 0.10
 }
 
 section{
@@ -15,4 +19,8 @@ section{
 #main{
 	border:3px solid black;
 	background: white;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Alpha 0.10
