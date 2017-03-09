@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 23 feb 2017 om 13:36
+-- Gegenereerd op: 09 mrt 2017 om 09:05
 -- Serverversie: 5.6.17
 -- PHP-versie: 5.5.12
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Databank: `komodo`
+-- Databank: `oldkomodo`
 --
 
 -- --------------------------------------------------------
