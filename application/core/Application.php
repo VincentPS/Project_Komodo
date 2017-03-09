@@ -18,9 +18,7 @@
 
         public function render()
         {
-            require APP . 'view/header.php';
             require APP . 'view/index.php';
-            require APP . 'view/footer.php';
         }
 
         private function connectDatabase()
