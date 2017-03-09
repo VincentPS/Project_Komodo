@@ -8,5 +8,6 @@
     require APP . 'config/config.php';
     require APP . 'core/application.php';
 
-    // makes the application
-    $App = new Application();
+    // makes the game
+    $game = new Application();
+    $game->render();
