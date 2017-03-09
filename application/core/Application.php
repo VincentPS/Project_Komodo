@@ -15,13 +15,14 @@
             //
             require APP . 'view/header.php';
             require APP . 'view/index.php';
+            require APP . 'view/footer.php';
 
             //
-            $this->connect();
+            $this->connectDatabase();
         }
 
         //
-        private function connect()
+        private function connectDatabase()
         {
 
             //
