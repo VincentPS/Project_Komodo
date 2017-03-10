@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
 	var canvas = document.getElementById('main');
 	var canvasCtx = canvas.getContext('2d');
 	var start = document.getElementById('start');
@@ -33,4 +33,4 @@ window.onload = function() {
 			resize(false);
 		}
 	})
-}
+});
