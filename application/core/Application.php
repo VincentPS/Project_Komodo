@@ -28,11 +28,19 @@
         public function render()
         {
             include_once(APP . 'view/templates/header.php');
+<<<<<<< HEAD
             if ($this->login->didUserChooseHero() === true) {
                 include_once(APP . 'view/indexes/game.php');
             } else {
                 include_once(APP . 'view/indexes/login.php');
                 if ($this->login->isUserLoggedIn() === true) {
+=======
+            if ($this->login->didUserChooseHero() == true) {
+                include_once(APP . 'view/indexes/game.php');
+            } else {
+                include_once(APP . 'view/indexes/login.php');
+                if ($this->login->isUserLoggedIn() == true) {
+>>>>>>> Alpha 0.20.2
                     include_once(APP . 'view/indexes/hero.php');
                 } else {
                     include_once(APP . 'view/indexes/register.php');
